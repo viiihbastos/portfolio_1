@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: "LLM-powered Data Analytics Platform",
     description: "Desenvolvido um sistema integrado que utiliza Large Language Models para análise automatizada de dados. Implementado com Azure OpenAI, Databricks MLflow, e integrações com APIs RESTful. Reduziu o tempo de análise em 75% e aumentou a precisão de insights em 40%.",
     tags: ["AI/ML", "LLM", "Azure OpenAI", "Databricks MLflow", "Python"],
-    image: "https://images.unsplash.com/photo-1599695278193-3f0d24290f44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
+    image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
     githubLink: "https://github.com/viiihbastos/llm-data-analytics",
     liveLink: "#",
     slug: "llm-data-analytics"
@@ -128,8 +128,8 @@ export function Projects() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {/* Mostrando apenas os 6 primeiros projetos na página principal */}
-          {projects.slice(0, 6).map((project, index) => (
+          {/* Mostrando projetos na página principal, excluindo o LLM project */}
+          {projects.filter((p, i) => i > 0).slice(0, 6).map((project, index) => (
             <Card 
               key={index} 
               className="bg-gray-800/60 border-gray-700 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 overflow-hidden"
