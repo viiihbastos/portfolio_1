@@ -17,6 +17,16 @@ export interface Project {
 
 // Exportando o array de projetos para reutilizar em outros componentes
 export const projects: Project[] = [
+  // Novo Projeto 2025 - AI/ML
+  {
+    title: "LLM-powered Data Analytics Platform",
+    description: "Desenvolvido um sistema integrado que utiliza Large Language Models para análise automatizada de dados. Implementado com Azure OpenAI, Databricks MLflow, e integrações com APIs RESTful. Reduziu o tempo de análise em 75% e aumentou a precisão de insights em 40%.",
+    tags: ["AI/ML", "LLM", "Azure OpenAI", "Databricks MLflow", "Python"],
+    image: "https://images.unsplash.com/photo-1599695278193-3f0d24290f44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
+    githubLink: "https://github.com/viiihbastos/llm-data-analytics",
+    liveLink: "#",
+    slug: "llm-data-analytics"
+  },
   // Adicionando slugs para cada projeto para facilitar a navegação
   
   // Projeto A - Mais focado em Data Engineering
