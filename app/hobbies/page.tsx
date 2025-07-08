@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 // Import static data
 import staticStravaData from './data/strava-data.json';
@@ -124,7 +124,7 @@ const sampleStats = {
   }
 };
 
-export default function HobbiesPage() {
+function HobbiesContent() {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
@@ -308,5 +308,14 @@ export default function HobbiesPage() {
         )}
       </div>
     </div>
+  );
+}
+
+// Componente principal com suspense boundary
+export default function HobbiesPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-12 text-center">Carregando...</div>}>
+      <HobbiesContent />
+    </Suspense>
   );
 }
