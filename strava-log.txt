@@ -1,0 +1,16 @@
+Iniciando busca de dados do Strava...
+Token de acesso obtido com sucesso
+Novo refresh_token: 2795743ab959af3b149c1aab15ed36e985301c28
+ΓÜá∩╕Å Atualize o script com este novo refresh_token para uso futuro
+Buscando atividades do atleta...
+Access Token (primeiros 10 caracteres): 9502ee8613...
+Resposta da API: 401 Unauthorized
+Detalhes: {"message":"Authorization Error","errors":[{"resource":"AccessToken","field":"activity:read_permission","code":"missing"}]}
+Erro ao buscar atividades: Error: Error fetching activities: Unauthorized (401)
+    at getAthleteActivities (C:\Users\victo\CascadeProjects\portfolio\portfolio_1-main\scripts\fetch-strava-data.js:100:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async main (C:\Users\victo\CascadeProjects\portfolio\portfolio_1-main\scripts\fetch-strava-data.js:225:24)
+Erro ao buscar dados do Strava: Error: Error fetching activities: Unauthorized (401)
+    at getAthleteActivities (C:\Users\victo\CascadeProjects\portfolio\portfolio_1-main\scripts\fetch-strava-data.js:100:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async main (C:\Users\victo\CascadeProjects\portfolio\portfolio_1-main\scripts\fetch-strava-data.js:225:24)

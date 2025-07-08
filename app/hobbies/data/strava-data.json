@@ -1,0 +1,109 @@
+{
+  "lastUpdated": "2025-06-23T19:15:00.000Z",
+  "activities": [
+    {
+      "id": 1,
+      "name": "Morning Run",
+      "type": "Run",
+      "distance": 5000,
+      "moving_time": 1800,
+      "start_date": "2025-06-21T08:30:00Z",
+      "formatted": {
+        "distance": "5.0 km",
+        "moving_time": "30m",
+        "start_date": "Jun 21, 2025"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Evening Cycling",
+      "type": "Ride",
+      "distance": 15000,
+      "moving_time": 3600,
+      "start_date": "2025-06-20T18:00:00Z",
+      "formatted": {
+        "distance": "15.0 km",
+        "moving_time": "1h 0m",
+        "start_date": "Jun 20, 2025"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Trail Run",
+      "type": "Run",
+      "distance": 8000,
+      "moving_time": 2700,
+      "start_date": "2025-06-19T16:30:00Z",
+      "formatted": {
+        "distance": "8.0 km",
+        "moving_time": "45m",
+        "start_date": "Jun 19, 2025"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Mountain Biking",
+      "type": "Ride",
+      "distance": 20000,
+      "moving_time": 5400,
+      "start_date": "2025-06-18T09:00:00Z",
+      "formatted": {
+        "distance": "20.0 km",
+        "moving_time": "1h 30m",
+        "start_date": "Jun 18, 2025"
+      }
+    }
+  ],
+  "stats": {
+    "recent_run_totals": {
+      "count": 5,
+      "distance": 25000,
+      "moving_time": 7200,
+      "elapsed_time": 8000,
+      "elevation_gain": 250
+    },
+    "recent_ride_totals": {
+      "count": 3,
+      "distance": 50000,
+      "moving_time": 9000,
+      "elapsed_time": 10000,
+      "elevation_gain": 500
+    },
+    "all_run_totals": {
+      "count": 120,
+      "distance": 800000,
+      "moving_time": 240000,
+      "elapsed_time": 260000,
+      "elevation_gain": 8000
+    },
+    "all_ride_totals": {
+      "count": 85,
+      "distance": 2500000,
+      "moving_time": 360000,
+      "elapsed_time": 380000,
+      "elevation_gain": 15000
+    },
+    "formatted": {
+      "recent_run_totals": {
+        "count": 5,
+        "distance": "25.0 km",
+        "moving_time": "2h 0m"
+      },
+      "recent_ride_totals": {
+        "count": 3,
+        "distance": "50.0 km",
+        "moving_time": "2h 30m"
+      },
+      "all_run_totals": {
+        "count": 120,
+        "distance": "800.0 km",
+        "moving_time": "66h 40m"
+      },
+      "all_ride_totals": {
+        "count": 85,
+        "distance": "2500.0 km",
+        "moving_time": "100h 0m"
+      }
+    }
+  }
+}

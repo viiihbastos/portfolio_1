@@ -1,0 +1,101 @@
+{
+  "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+  "test_suite": "Login",
+  "environment": "staging",
+  "sprint": "Sprint 17",
+  "status": "PASS",
+  "start_time": "2025-06-06T18:25:56.138469",
+  "end_time": "2025-06-06T18:39:02.138469",
+  "duration_seconds": 786,
+  "executed_by": "github-actions",
+  "total_steps": 7,
+  "passed_steps": 7,
+  "failed_steps": 0,
+  "skipped_steps": 0,
+  "steps": [
+    {
+      "step_id": "4a7a1cab-8388-46b9-ba22-fbaaa21302da",
+      "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+      "step_number": 1,
+      "description": "Test Step 1",
+      "status": "PASS",
+      "start_time": "2025-06-06T17:54:02.138490",
+      "end_time": "2025-06-06T17:56:03.138490",
+      "duration_seconds": 121,
+      "error_message": null,
+      "screenshot": null
+    },
+    {
+      "step_id": "2dcf99fa-de82-48d3-85cb-6333b815a5a3",
+      "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+      "step_number": 2,
+      "description": "Test Step 2",
+      "status": "PASS",
+      "start_time": "2025-06-06T18:10:02.138505",
+      "end_time": "2025-06-06T18:13:08.138505",
+      "duration_seconds": 186,
+      "error_message": null,
+      "screenshot": "screenshot_2.png"
+    },
+    {
+      "step_id": "42b38d62-9645-4e97-bc92-a0a104b98bb1",
+      "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+      "step_number": 3,
+      "description": "Test Step 3",
+      "status": "PASS",
+      "start_time": "2025-06-06T18:24:02.138513",
+      "end_time": "2025-06-06T18:24:40.138513",
+      "duration_seconds": 38,
+      "error_message": null,
+      "screenshot": null
+    },
+    {
+      "step_id": "2f7fca00-3112-4b3b-98bc-7cd5181ddfe4",
+      "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+      "step_number": 4,
+      "description": "Test Step 4",
+      "status": "PASS",
+      "start_time": "2025-06-06T17:51:02.138518",
+      "end_time": "2025-06-06T17:51:51.138518",
+      "duration_seconds": 49,
+      "error_message": null,
+      "screenshot": null
+    },
+    {
+      "step_id": "dc6f4740-62fd-43a9-b26b-88164a354613",
+      "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+      "step_number": 5,
+      "description": "Test Step 5",
+      "status": "PASS",
+      "start_time": "2025-06-06T18:08:02.138524",
+      "end_time": "2025-06-06T18:08:58.138524",
+      "duration_seconds": 56,
+      "error_message": null,
+      "screenshot": null
+    },
+    {
+      "step_id": "6c1c68c1-1984-468a-abea-b71ed7152744",
+      "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+      "step_number": 6,
+      "description": "Test Step 6",
+      "status": "PASS",
+      "start_time": "2025-06-06T17:51:02.138529",
+      "end_time": "2025-06-06T17:53:36.138529",
+      "duration_seconds": 154,
+      "error_message": null,
+      "screenshot": "screenshot_6.png"
+    },
+    {
+      "step_id": "9af87e65-be49-4d15-8bab-74222fa3c633",
+      "test_run_id": "b21d3bab-e6c4-43fb-9611-b31701c5414e",
+      "step_number": 7,
+      "description": "Test Step 7",
+      "status": "PASS",
+      "start_time": "2025-06-06T18:05:02.138535",
+      "end_time": "2025-06-06T18:08:04.138535",
+      "duration_seconds": 182,
+      "error_message": null,
+      "screenshot": null
+    }
+  ]
+}

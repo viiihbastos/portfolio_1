@@ -1,0 +1,20 @@
+groups:
+- name: TestAlerts
+  rules:
+  - alert: HighFailureRateStaging
+    expr: test_run_success_rate{environment="staging"} < 95
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "High test failure rate in staging environment"
+      description: "Test success rate in staging is below 95% (current value: {{ $value }}%)"
+      
+  - alert: LongTestExecutionTime
+    expr: test_run_avg_duration{environment="staging"} > 300
+    for: 10m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Tests are taking longer than expected"
+      description: "Average test duration is over 300 seconds (current value: {{ $value }}s)"

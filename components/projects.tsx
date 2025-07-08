@@ -17,6 +17,16 @@ export interface Project {
 
 // Exportando o array de projetos para reutilizar em outros componentes
 export const projects: Project[] = [
+  // Novo Projeto - Test Integration Pipeline
+  {
+    title: "Test Integration Pipeline",
+    description: "Implementei um pipeline de integração de dados para coleta, transformação e armazenamento de resultados de testes automatizados. Utilizando PostgreSQL, Python, Prometheus e Grafana, o sistema fornece visibilidade em tempo real dos resultados de execução de testes para equipes de QA, melhorando a qualidade e a velocidade de detecção de problemas.",
+    tags: ["Python", "PostgreSQL", "Docker", "Prometheus", "Grafana", "Data Pipeline"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    githubLink: "https://github.com/viiihbastos/test-integration-pipeline",
+    liveLink: "#",
+    slug: "test-integration-pipeline"
+  },
   // Novo Projeto 2025 - AI/ML
   {
     title: "LLM-powered Data Analytics Platform",

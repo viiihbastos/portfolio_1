@@ -3,8 +3,11 @@
 // Strava API constants - these should be stored in environment variables in a production app
 const CLIENT_ID = '165622';
 const CLIENT_SECRET = 'ba826640782efd86b910d33434ba4c6a5f9b1b6c';
-const REDIRECT_URI = 'https://victorbastos.vercel.app/hobbies';
-const SCOPE = 'read';
+// Dynamically set the redirect URI based on environment
+const REDIRECT_URI = typeof window !== 'undefined' 
+  ? `${window.location.origin}/hobbies` 
+  : 'https://victorbastos.vercel.app/hobbies';
+const SCOPE = 'activity:read_all,profile:read_all,read_all';
 
 // Token storage keys
 const TOKEN_STORAGE_KEY = 'strava_tokens';

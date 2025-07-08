@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+// Import static data
+import staticStravaData from './data/strava-data.json';
+// Keep the service imports for optional live data
 import { 
   getAuthorizationUrl, 
   exchangeAuthorizationCode,
@@ -13,15 +16,125 @@ import {
   isAuthenticated
 } from './services/strava-service';
 
+// Types
+interface Activity {
+  id: number;
+  name: string;
+  type: string;
+  distance: number;
+  moving_time: number;
+  start_date: string;
+}
+
+interface Stats {
+  recent_run_totals: {
+    count: number;
+    distance: number;
+    moving_time: number;
+    elapsed_time: number;
+    elevation_gain: number;
+  };
+  recent_ride_totals: {
+    count: number;
+    distance: number;
+    moving_time: number;
+    elapsed_time: number;
+    elevation_gain: number;
+  };
+  all_run_totals: {
+    count: number;
+    distance: number;
+    moving_time: number;
+    elapsed_time: number;
+    elevation_gain: number;
+  };
+  all_ride_totals: {
+    count: number;
+    distance: number;
+    moving_time: number;
+    elapsed_time: number;
+    elevation_gain: number;
+  };
+}
+
+// Sample data for demo purposes
+const sampleActivities = [
+  {
+    id: 1,
+    name: "Morning Run",
+    type: "Run",
+    distance: 5000,
+    moving_time: 1800,
+    start_date: "2025-06-21T08:30:00Z"
+  },
+  {
+    id: 2,
+    name: "Evening Cycling",
+    type: "Ride",
+    distance: 15000,
+    moving_time: 3600,
+    start_date: "2025-06-20T18:00:00Z"
+  },
+  {
+    id: 3,
+    name: "Trail Run",
+    type: "Run",
+    distance: 8000,
+    moving_time: 2700,
+    start_date: "2025-06-19T16:30:00Z"
+  },
+  {
+    id: 4,
+    name: "Mountain Biking",
+    type: "Ride",
+    distance: 20000,
+    moving_time: 5400,
+    start_date: "2025-06-18T09:00:00Z"
+  }
+];
+
+const sampleStats = {
+  recent_run_totals: {
+    count: 5,
+    distance: 25000,
+    moving_time: 7200,
+    elapsed_time: 8000,
+    elevation_gain: 250
+  },
+  recent_ride_totals: {
+    count: 3,
+    distance: 50000,
+    moving_time: 9000,
+    elapsed_time: 10000,
+    elevation_gain: 500
+  },
+  all_run_totals: {
+    count: 120,
+    distance: 800000,
+    moving_time: 240000,
+    elapsed_time: 260000,
+    elevation_gain: 8000
+  },
+  all_ride_totals: {
+    count: 85,
+    distance: 2500000,
+    moving_time: 360000,
+    elapsed_time: 380000,
+    elevation_gain: 15000
+  }
+};
+
 export default function HobbiesPage() {
-  const [activities, setActivities] = useState([]);
-  const [stats, setStats] = useState(null);
+  const [activities, setActivities] = useState<Activity[]>([]);
+  const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [isLiveData, setIsLiveData] = useState(false);
+  const [showLiveOption, setShowLiveOption] = useState(false);
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const handleAuth = async () => {
+    const loadData = async () => {
       setLoading(true);
       try {
         // Check for authorization code in URL
@@ -29,26 +142,47 @@ export default function HobbiesPage() {
         if (code) {
           await exchangeAuthorizationCode(code);
           window.history.replaceState({}, document.title, window.location.pathname);
+          setIsLiveData(true);
         }
 
+        // First option: Use authenticated session if available
         if (isAuthenticated()) {
-          // Fetch athlete activities
-          const activitiesData = await getAthleteActivities();
-          setActivities(activitiesData);
+          try {
+            // Fetch athlete activities
+            const activitiesData = await getAthleteActivities();
+            setActivities(activitiesData);
 
-          // Fetch athlete stats
-          const statsData = await getAthleteStats();
-          setStats(statsData);
+            // Fetch athlete stats
+            const statsData = await getAthleteStats();
+            setStats(statsData);
+            setIsLiveData(true);
+            setShowLiveOption(true);
+            console.log('Using live Strava data');
+          } catch (liveError) {
+            console.error('Error fetching live Strava data:', liveError);
+            // Fall back to static data on error
+            setActivities(staticStravaData.activities);
+            setStats(staticStravaData.stats);
+            setIsLiveData(false);
+          }
+        } else {
+          // Second option: Use static data
+          console.log('Using static Strava data');
+          setActivities(staticStravaData.activities);
+          setStats(staticStravaData.stats);
+          setIsLiveData(false);
+          // Show live option if there's static data
+          setShowLiveOption(true);
         }
       } catch (err) {
-        console.error('Error fetching Strava data:', err);
+        console.error('Error in Strava data handling:', err);
         setError('Failed to load Strava data. Please try again later.');
       } finally {
         setLoading(false);
       }
     };
 
-    handleAuth();
+    loadData();
   }, [searchParams]);
 
   const handleConnectStrava = () => {

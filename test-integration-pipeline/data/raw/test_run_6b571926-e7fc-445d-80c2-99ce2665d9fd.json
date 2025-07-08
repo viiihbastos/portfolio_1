@@ -1,0 +1,89 @@
+{
+  "test_run_id": "6b571926-e7fc-445d-80c2-99ce2665d9fd",
+  "test_suite": "User Management",
+  "environment": "staging",
+  "sprint": "Sprint 19",
+  "status": "FAIL",
+  "start_time": "2025-06-06T18:26:25.137779",
+  "end_time": "2025-06-06T18:39:02.137779",
+  "duration_seconds": 757,
+  "executed_by": "automation",
+  "total_steps": 6,
+  "passed_steps": 5,
+  "failed_steps": 1,
+  "skipped_steps": 0,
+  "steps": [
+    {
+      "step_id": "c8798580-6e99-4b00-8bbc-5c66504b6e40",
+      "test_run_id": "6b571926-e7fc-445d-80c2-99ce2665d9fd",
+      "step_number": 1,
+      "description": "Test Step 1",
+      "status": "FAIL",
+      "start_time": "2025-06-06T18:22:02.137810",
+      "end_time": "2025-06-06T18:25:59.137810",
+      "duration_seconds": 237,
+      "error_message": "Assertion error: Expected value not found",
+      "screenshot": "screenshot_1.png"
+    },
+    {
+      "step_id": "be708f23-61e8-49cc-9e96-0a9b0b66b89e",
+      "test_run_id": "6b571926-e7fc-445d-80c2-99ce2665d9fd",
+      "step_number": 2,
+      "description": "Test Step 2",
+      "status": "PASS",
+      "start_time": "2025-06-06T18:06:02.137834",
+      "end_time": "2025-06-06T18:09:00.137834",
+      "duration_seconds": 178,
+      "error_message": null,
+      "screenshot": null
+    },
+    {
+      "step_id": "71bef115-97a7-4882-99e1-65d390ed1db3",
+      "test_run_id": "6b571926-e7fc-445d-80c2-99ce2665d9fd",
+      "step_number": 3,
+      "description": "Test Step 3",
+      "status": "PASS",
+      "start_time": "2025-06-06T18:11:02.137844",
+      "end_time": "2025-06-06T18:13:39.137844",
+      "duration_seconds": 157,
+      "error_message": null,
+      "screenshot": "screenshot_3.png"
+    },
+    {
+      "step_id": "de92af33-cd0f-4665-b95b-d0c8366c2be3",
+      "test_run_id": "6b571926-e7fc-445d-80c2-99ce2665d9fd",
+      "step_number": 4,
+      "description": "Test Step 4",
+      "status": "PASS",
+      "start_time": "2025-06-06T17:43:02.137851",
+      "end_time": "2025-06-06T17:43:41.137851",
+      "duration_seconds": 39,
+      "error_message": null,
+      "screenshot": null
+    },
+    {
+      "step_id": "42639e8f-209b-438d-aa60-ab60f94c7154",
+      "test_run_id": "6b571926-e7fc-445d-80c2-99ce2665d9fd",
+      "step_number": 5,
+      "description": "Test Step 5",
+      "status": "PASS",
+      "start_time": "2025-06-06T18:34:02.137858",
+      "end_time": "2025-06-06T18:34:13.137858",
+      "duration_seconds": 11,
+      "error_message": null,
+      "screenshot": "screenshot_5.png"
+    },
+    {
+      "step_id": "6ba7a3bf-b78c-48ab-b8ba-38d7262af51c",
+      "test_run_id": "6b571926-e7fc-445d-80c2-99ce2665d9fd",
+      "step_number": 6,
+      "description": "Test Step 6",
+      "status": "PASS",
+      "start_time": "2025-06-06T17:57:02.137864",
+      "end_time": "2025-06-06T17:59:17.137864",
+      "duration_seconds": 135,
+      "error_message": null,
+      "screenshot": null
+    }
+  ]
+}
