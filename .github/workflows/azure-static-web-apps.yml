@@ -27,7 +27,9 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: "build"  # Apontando para a nova pasta de build configurada no next.config.js
+          output_location: "out"  # Diretório padrão de saída do Next.js para exportação estática
+        env:
+          IS_STATIC_EXPORT: true   # Indica que estamos usando exportação estática do Next.js
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

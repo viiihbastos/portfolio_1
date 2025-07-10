@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: 'build', // Define o diretório de saída como 'build'
   output: 'export', // Exporta como arquivos estáticos
+  // Usando o diretório padrão 'out' que o Azure Static Web Apps espera
 }
 
 module.exports = nextConfig
