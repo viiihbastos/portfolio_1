@@ -28,6 +28,7 @@ jobs:
           app_location: "/"
           api_location: ""
           output_location: "out"  # Diretório padrão de saída do Next.js para exportação estática
+          app_build_command: "npm run export"
         env:
           IS_STATIC_EXPORT: true   # Indica que estamos usando exportação estática do Next.js
 
