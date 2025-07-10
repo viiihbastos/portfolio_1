@@ -1,13 +1,28 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
-  },
   "routes": [
     {
-      "route": "/*",
-      "serve": "/index.html",
-      "statusCode": 200
+      "route": "/",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/projects",
+      "serve": "/projects.html"
+    },
+    {
+      "route": "/hobbies",
+      "serve": "/hobbies.html"
+    },
+    {
+      "route": "/projects/*",
+      "serve": "/projects/*/index.html"
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "*.js", "*.json"]
+  },
+  "platform": {
+    "apiRuntime": "node:18"
+  },
+  "trailingSlash": "never"
 }
